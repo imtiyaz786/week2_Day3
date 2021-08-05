@@ -3,8 +3,10 @@ package mywork;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.TreeSet;
 import java.util.Map.Entry;
 import java.util.Set;
 
@@ -29,20 +31,23 @@ public class SentenceArrangement2 {
 		{
 			String str = w.toLowerCase();
 			Set<Character> uniqueCount = new HashSet<>();
-			
-
-			
+		
+			int count = 0;
 			for (int j = 0; j < str.length(); j++)
 			{	
+
 	
 				if (str.charAt(j) == 'a' || str.charAt(j) == 'e' || str.charAt(j) == 'i' || str.charAt(j) == 'o' || str.charAt(j) == 'u')
-				{
+				{	
 					uniqueCount.add(str.charAt(j));
 					
-				
+
+					
 				}
+				count += uniqueCount.size();
 			} 
-			int count = uniqueCount.size();
+			
+			
 					
 			
 			if (map.containsKey(count))
@@ -52,7 +57,7 @@ public class SentenceArrangement2 {
 				map.put(count, temp);
 			}
 			else 
-				map.put(count, w);
+				map.put(count), w);
 		}
 		
 		StringBuilder sb = new StringBuilder();

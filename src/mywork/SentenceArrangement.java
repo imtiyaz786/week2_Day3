@@ -11,16 +11,13 @@ public class SentenceArrangement
 
 		String s = "hey hello everyone its getting complicated right that's why we should wrap up the tasks given on same day but we rarely stick to it sad";
 		
-		System.out.println(sortSentenceBasedOnCountOfVowel(s));
+		System.out.println(sortSentenceBasedOnVowelCountAndReverseOrder(s));
 		
 
 
 	}
 	
-	private static char[] sortSentenceBasedOnCountOfVowel(String s) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 
 	public static String sortSentenceBasedOnVowelCountAndReverseOrder(String s) {
 		

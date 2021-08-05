@@ -1,0 +1,61 @@
+package mywork;
+
+import java.util.*;
+import java.util.Map.Entry;
+
+public class SentenceArrangement
+{
+
+	public static void main(String[] args)
+	{
+
+		String s = "hey hello everyone its getting complicated right that's why we should wrap up the tasks given on same day but we rarely stick to it sad";
+		
+		System.out.println(sortSentenceBasedOnCountOfVowel(s));
+		
+
+
+	}
+	
+	private static char[] sortSentenceBasedOnCountOfVowel(String s) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static String sortSentenceBasedOnVowelCountAndReverseOrder(String s) {
+		
+		Map <Integer, String> map = new TreeMap<>();
+		String ar[] = s.split(" ");
+		Arrays.sort(ar, Collections.reverseOrder());
+		
+		for (String w : ar)
+		{
+			int count = 0;
+			String str = w.toLowerCase();
+			for (int j = 0; j < str.length(); j++)
+			{	
+				if (str.charAt(j) == 'a' || str.charAt(j) == 'e' || str.charAt(j) == 'i' || str.charAt(j) == 'o' || str.charAt(j) == 'u')
+					count++;
+			}
+					
+			
+			if (map.containsKey(count))
+			{
+				String temp=map.get(count);
+				temp=temp+" " + w;
+				map.put(count, temp);
+			}
+			else 
+				map.put(count, w);
+		}
+		
+		StringBuilder sb = new StringBuilder();
+		for (Entry<Integer, String> e: map.entrySet())
+			sb.append(e.getValue()).append(" ");
+		
+		return sb.toString().trim();
+			
+		
+	}
+	
+}

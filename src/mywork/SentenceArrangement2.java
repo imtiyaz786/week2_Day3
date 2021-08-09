@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.TreeSet;
@@ -17,6 +19,7 @@ public class SentenceArrangement2 {
 		String s = "hey hello everyone its getting complicated right that's why we should wrap up the tasks given on same day but we rarely stick to it sad";
 
 		System.out.print(s);
+		
 		
 	}
 	
@@ -57,14 +60,14 @@ public class SentenceArrangement2 {
 				map.put(count, temp);
 			}
 			else 
-				map.put(count), w);
+				map.put(count, w);
 		}
 		
 		StringBuilder sb = new StringBuilder();
 		for (Entry<Integer, String> e: map.entrySet())
 			sb.append(e.getValue()).append(" ");
 		
-		return sb.toString().trim();
+		return sb.toString().trim(); 
 
 	}
 

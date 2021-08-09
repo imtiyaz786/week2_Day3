@@ -6,20 +6,47 @@ import java.util.Map.Entry;
 public class SentenceArrangement
 {
 
+	//private static final int Integer.MAX_VALUE = 0;
+
 	public static void main(String[] args)
 	{
 
-		String s = "hey hello everyone its getting complicated right that's why we should wrap up the tasks given on same day but we rarely stick to it sad";
-		
-		System.out.println(sortSentenceBasedOnVowelCountAndReverseOrder(s));
-		
-
-
+	
+		Scanner s = new Scanner(System.in);
+		int T = s.nextInt();
+		while(T != 0) {
+			int X = s.nextInt();
+			
+			int count = 0;
+			if (X < 10)
+				System.out.print(-1 + " ");
+			else {
+			
+			for (int i = X; i <= Integer.MAX_VALUE; i= i * 2)
+				if (X%10 != 0)
+				{	
+					count++;
+					continue;
+					
+				}
+			}
+					
+			System.out.print(count + " ");	
+		}
 	}
+
+		
+		
+		
+
+
+	
+
+	
 	
 
 
-	public static String sortSentenceBasedOnVowelCountAndReverseOrder(String s) {
+	/*public static String sortSentenceBasedOnVowelCountAndReverseOrder(String s) {
 		
 		Map <Integer, String> map = new TreeMap<>();
 		String ar[] = s.split(" ");
@@ -53,6 +80,6 @@ public class SentenceArrangement
 		return sb.toString().trim();
 			
 		
-	}
+	}*/
 	
 }
